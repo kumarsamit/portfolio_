@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$fon1:'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+$font-logo:'Shadows Into Light', cursive;
+
+@import "color";
+
+@mixin  main-heading{
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.125;
+    font-family: $fon1;
+    color:$white-color;
+    text-align: center;
+    
+    
+    @media screen and (max-width:600px){
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+}
+
+@mixin text{
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: $fon1;
+
+    @media screen and (max-width:600px){
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
+@mixin sub-heading{
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-family: $fon1;
+
+    @media screen and (max-width: 600px){
+        font-size: 2em;
+    };
+        
+    
+}
+@mixin description-text{
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: $fon1;
+}

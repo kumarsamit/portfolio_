@@ -1,0 +1,603 @@
+/*
+-------------index--------------
+1. import
+
+*/
+@import "typography";
+@import "reset";
+@import "color";
+@import "buttons";
+
+// hero page
+*{
+	scroll-behavior: smooth;
+}
+body{
+    background-color:#1d1d1d  !important;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sticky{
+    top:0;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+}
+.logo a{
+    text-decoration: none;
+    color: $seconday-color;
+    font-family: $font-logo;
+    text-decoration: none;
+    color: $seconday-color;
+    font-weight: 600;
+    font-size: 28px;
+    margin-left: 30px;
+}
+nav{
+    flex: 1;
+    margin-right: 70px;
+    text-align: right;
+
+    ul{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+
+        li{
+        display: inline-block;
+        font-weight: 500;
+        margin: 0px 8px;
+        position: relative;
+
+            a{
+                color:white;
+                text-decoration:none;
+                margin: auto;
+                font-family: $fon1;
+
+                &:hover{
+                    color: white;
+                }
+
+            }
+        }
+    }
+}
+.menu{
+    margin-right: 30px;
+    display: none;
+
+
+    i{
+        color: $seconday-color;
+        font-size: 22px;
+    }
+}
+
+.header>nav> ul >li::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background: $seconday-color;
+    display: block;
+    margin: 0;
+    transition: 0.5s;
+}
+.header>nav> ul >li:hover::after{
+    width: 55%;
+}
+.header>nav> ul >li::before{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: $seconday-color;
+    display: block;
+    right: 0 ;
+    top: 0;
+    transition: 0.5s;
+}
+.header>nav> ul >li:hover::before{
+    width: 55%;
+}
+
+
+@media only screen and (max-width:500px){
+    .menu{
+        display: block;
+    }
+    .header>nav>ul{
+        position: absolute;
+        top:50px;
+        left: 0px;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        background: 	#899499;
+        transition: 0.4s;
+        margin: 10px 0;
+        z-index: 5;
+        opacity: .9;
+    }
+    .header>nav> ul >li{
+        margin: 15px 30px 15px 15px;
+        display: block;
+
+        &::after{
+            content: none;
+        }
+        &::before{
+            content: none;
+        }
+    }
+}
+
+@media only screen and (max-width:800px){
+    .header nav{
+        margin-right: 20px;
+    }
+}
+
+// hero page
+.hero-page{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    .hero-page-heading{
+        width: 50%;
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+        h1{
+            @include main-heading;
+        }
+        p{
+            text-align: center;
+            @include text;
+            color: $seconday-white-color;
+            margin-top: 10px;
+            margin-bottom: 40px;
+
+            a{
+                @include primary-btn;
+            }
+        }
+    }
+    .hero-page-svg{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg{
+            width: 90%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+@media screen and(max-width:770px){
+    .hero-page{
+        .hero-page-heading{
+            width: 100%;
+        }
+        .hero-page-svg{
+            width: 100%;
+        }
+    }
+}
+
+// modal
+.modal-header{
+    border: none !important;
+    background: $background-color;
+    color: $white-color;
+    border-right: 2px solid $white-color !important;
+    border-left: 2px solid $white-color !important;
+    border-top: 2px solid $white-color !important;
+
+
+
+}
+.modal-footer{
+    border: none !important;
+    background: $background-color;
+    border-right: 2px solid $white-color !important;
+    border-left: 2px solid $white-color !important;
+    border-bottom: 2px solid $white-color !important;
+
+    button{
+        @include primary-btn;
+        
+    }
+}
+.modal-body{
+    border: none !important;
+    background:$background-color;
+    color: $seconday-white-color;
+    border-right: 2px solid $white-color !important;
+    border-left: 2px solid $white-color !important;
+
+    .fas{
+        color : $primary-color;
+        font-size: 22px;
+        margin-right: 10px;
+    }
+}
+
+
+//about page
+.about{
+    width: 100%;
+    margin: 100px auto 0;
+    padding: 100px 10px 200px;
+    background-color: #7510F7;
+
+   div{
+       width: 90%;
+       margin: auto;
+       padding:10px 0;
+       max-width: 800px;
+
+    h2{
+        @include sub-heading;
+        color: $white-color;
+        margin-bottom: 15px;
+
+        span{
+            color: $seconday-color;
+        }
+    }
+    small{
+        @include description-text;
+        color: $white-color;
+        font-weight: 500 !important;
+    }
+    p{
+        @include description-text;
+        color: $seconday-white-color;
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+    a{
+        @include secondary-btn;
+    }
+   }
+
+}
+@media  screen  and(max-width:770px){
+    .about{
+        margin:  0 auto 0;
+    }
+
+}
+
+// skills
+.skills{
+    width: 100%;
+    padding:0 10px;
+
+    div{
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px #555;
+        width: 90%;
+        margin: auto;
+        padding: 30px;
+        max-width: 840px;
+        position: relative;
+        top:-100px;
+        background-color:  $background-color;
+
+        h2{
+            @include sub-heading;
+            color: $white-color;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+
+            span{
+                color: $seconday-color;
+            }
+        }
+        p{
+            @include description-text;
+            color: $seconday-white-color;
+            margin-bottom: 35px;
+            margin-top: 10px;
+        }
+        small{
+            @include description-text;
+            color: $primary-color;
+            font-weight: 500 !important;
+            display: block;
+        }
+    }
+}
+// project
+.project{
+    width: 100%;
+    padding: 50px 0;
+
+    div{
+        width: 90%;
+        max-width: 1280px;
+        margin: auto;
+
+        h2{
+            @include sub-heading;
+            color: $white-color;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-align: center;
+
+            span{
+                color: $seconday-color;
+            }
+        }
+        p{
+            @include description-text;
+            color: $seconday-white-color;
+            margin-bottom: 35px;
+            margin-top: 10px;
+            text-align: center;
+
+            a{
+                text-decoration:underline;
+                color: $primary-color;
+            }
+        }
+        .project-list{
+            width: 100%;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+
+            .project-item{
+                width: 32%;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 20px;
+                background: #333;
+
+                img{
+                    width: 100%;
+                    height:auto;
+                    transition: .5s;
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+                .project-item-info{
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.9);
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    opacity:0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: .3s;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+                    p{
+                        @include description-text;
+                        color: $white-color;
+                        font-weight: 500 !important;
+                        display: block;
+
+                        span{
+                            font-weight: 300 !important;
+                            font-size: 14px;
+                        }
+                    }
+                    a{
+                        @include primary-btn;
+                        align-items: center;
+                        font-size: 16px !important;
+
+                        .fas{
+                            margin-left: 5px;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+@media screen and (max-width:800px){
+    .project-list .project-item{
+        width: 45% !important;
+    }
+
+}
+@media screen and (max-width:550px){
+    .project-list .project-item{
+        width: 90% !important;
+    }
+
+}
+// start a .project
+.start-project{
+    max-width: 1200px;
+    width: 95%;
+    margin: 20px auto 100px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+
+    div{
+        width: calc(100%/3);
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width:700px){
+            width: 100%;
+        }
+
+        h2{
+            display: block;
+            @include sub-heading;
+            color: $seconday-white-color;
+            text-align: center;
+            margin: auto;
+            font-weight: 500 !important;
+
+        }
+        p{
+            @include description-text;
+            color: $seconday-white-color;
+            text-align: center;
+            margin: auto;
+
+            @media screen and (max-width:700px){
+                margin-bottom: 10px;
+            }
+
+
+
+            a{
+                @include secondary-btn;
+                font-weight: 500;
+            }
+        }
+    }
+
+}
+//  footer - contact details
+.footer{
+    width: 90%;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+    .contact-form{
+        width: 60%;
+        padding:20px;
+
+        @media screen and (max-width:900px){
+            width: 80%;
+        }
+        @media screen and (max-width:700px){
+            width: 90%;
+        }
+        @media screen and (max-width:600px){
+            width: 100%;
+        }
+        
+        h2{
+            @include sub-heading;
+            color: $white-color;
+            text-transform: uppercase;
+
+            span{
+                color: $seconday-color;
+            }
+        }
+        p{
+            @include description-text;
+            color: $seconday-white-color;
+            margin-bottom: 35px;
+
+            a{
+                @include primary-btn;
+            }
+        }
+
+        input{
+            width: 95%;
+            height: 50px;
+            margin-bottom:15px;
+            background: $input-bg;
+            border: none;
+            border-bottom: 2px solid $input-bg;
+            padding-left: 10px;
+            color: $seconday-white-color;
+
+            
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                border-bottom: 2px solid $seconday-color;
+            }
+        }
+        textarea{
+            @extend input;
+            height: 180px ;
+            color: $seconday-white-color;
+            margin-bottom: 30px;
+
+
+        }
+        .form-submit{
+            width: 95%;
+            text-align: right !important;
+        }
+        
+    }
+}
+// socail media accounts
+.social-link{
+    width: 100%;
+    margin-top: 60px;
+
+    p{
+        @include description-text;
+        font-weight: 500 !important;
+        display: block;
+        text-align: center;
+
+        a{
+            text-decoration: none;
+            color: $seconday-white-color;
+            margin:  0 10px;
+
+            
+            &:hover{
+                color: $primary-color;
+            }
+        }
+
+    }
+    small{
+        @include description-text;
+        font-weight: 200 !important;
+        display: block;
+        text-align: center;
+        color: $seconday-white-color;
+
+    }
+}

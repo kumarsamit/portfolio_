@@ -1,0 +1,35 @@
+@import "color";
+@import "typography";
+
+@mixin  primary-btn{
+    text-decoration: none;
+    color: $seconday-color;
+    font-size: 18px;
+    font-family:$fon1 ;
+    border: 2px solid $seconday-color;
+    padding: 10px 25px;
+    transition: .3s;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: $seconday-color;
+        color: #1d1d1d;
+    }
+    
+}
+@mixin  secondary-btn{
+    text-decoration: none;
+    color: $white-color;
+    font-size: 18px;
+    font-family:$fon1 ;
+    border: 2px solid $seconday-color;
+    padding: 10px 25px;
+    transition: .3s;
+    border-radius: 5px;
+
+    &:hover{
+        background-color:$background-color;
+        color: $seconday-color;
+    }
+    
+}

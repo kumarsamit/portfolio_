@@ -547,6 +547,12 @@ nav{
         p{
             @include description-text;
             color: $seconday-white-color;
+
+            a{
+                @include secondary-btn;
+                padding: 0px;
+                border: none;
+            }
         }
        
     }

@@ -1085,6 +1085,7 @@ nav ul li a:hover {
 }
 
 .contact-form select option {
+  width: 100%;
   background: #ddd;
   color: #2b2b2b;
   font-size: 18px;

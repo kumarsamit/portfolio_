@@ -40,9 +40,10 @@ body{
     font-weight: 600;
     font-size: 28px;
     margin-left: 30px;
+    flex:1;
 }
 nav{
-    flex: 1;
+    flex: 5;
     margin-right: 70px;
     text-align: right;
 
@@ -534,6 +535,7 @@ nav{
             a{
                 @include primary-btn;
             }
+            
         }
 
         input{
@@ -565,6 +567,11 @@ nav{
         .form-submit{
             width: 95%;
             text-align: right !important;
+            
+            input{
+                width: 100%;
+                @include primary-btn;
+            }
         }
         
     }

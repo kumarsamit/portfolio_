@@ -1,0 +1,45 @@
+@import "typography";
+@import "reset";
+@import "color";
+@import "buttons";
+@import "style";
+
+// contact form
+.contact-form-header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+
+    a{
+        @include primary-btn;
+    }
+}
+
+// contact form
+.contact-form{
+    select{
+        width: 95%;
+        height: 50px;
+        margin-bottom:15px;
+        background: $input-bg;
+        border: none;
+        border-bottom: 2px solid $input-bg;
+        padding-left: 10px;
+        color: $seconday-white-color !important;
+
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            border-bottom: 2px solid $seconday-color;
+        }
+
+        option{
+            background: $seconday-white-color;
+            color:$input-bg;
+            font-size: 18px;
+            
+        }
+    }
+}

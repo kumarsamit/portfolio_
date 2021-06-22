@@ -1051,6 +1051,20 @@ nav ul li a:hover {
   color: #1d1d1d;
 }
 
+.footer-start-project {
+  width: 100%;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .contact-form select {
   width: 95%;
   height: 50px;

@@ -17,6 +17,13 @@
 }
 
 // contact form
+.footer-start-project{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .contact-form{
     select{
         width: 95%;

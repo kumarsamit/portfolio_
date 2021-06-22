@@ -697,7 +697,7 @@ nav ul li a:hover {
 .start-project {
   max-width: 1200px;
   width: 95%;
-  margin: 20px auto 100px;
+  margin: 20px auto 50px;
   border-radius: 10px;
   background-color: #7510F7;
   display: -webkit-box;
@@ -784,7 +784,7 @@ nav ul li a:hover {
 
 .footer {
   width: 100%;
-  margin: 0 auto 10px;
+  margin: 0 auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,7 +794,11 @@ nav ul li a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: #2b2b2b;
-  padding: 50px 0;
+  padding: 0 0 20px;
+}
+
+.footer svg {
+  background: #1d1d1d;
 }
 
 .footer .contact-form, .footer .contact-info {
@@ -867,7 +871,8 @@ nav ul li a:hover {
 
 .social-link {
   width: 100%;
-  margin-top: 60px;
+  background: #2b2b2b;
+  padding-top: 60px;
 }
 
 .social-link p {

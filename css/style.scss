@@ -447,7 +447,7 @@ nav{
 .start-project{
     max-width: 1200px;
     width: 95%;
-    margin: 20px auto 100px;
+    margin: 20px auto 50px;
     border-radius: 10px;
     background-color: $primary-color;
     display: flex;
@@ -498,12 +498,16 @@ nav{
 //  footer - contact details
 .footer{
     width: 100%;
-    margin: 0 auto 10px;
+    margin: 0 auto 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background: $input-bg;    
-    padding: 50px 0;
+    padding:0 0 20px;
+    
+    svg{
+        background: $background-color;
+    }
     
     .contact-form{
         width: 100%;
@@ -550,7 +554,8 @@ nav{
 // socail media accounts
 .social-link{
     width: 100%;
-    margin-top: 60px;
+    background: $input-bg;
+    padding-top: 60px;
 
     p{
         @include description-text;

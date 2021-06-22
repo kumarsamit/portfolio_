@@ -502,21 +502,14 @@ nav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
+    background: $input-bg;    
+    padding: 50px 0;
     
     .contact-form{
-        width: 60%;
-        padding:20px;
-
-        @media screen and (max-width:900px){
-            width: 80%;
-        }
-        @media screen and (max-width:700px){
-            width: 90%;
-        }
-        @media screen and (max-width:600px){
-            width: 100%;
-        }
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+        padding: 0 20px ;
         
         h2{
             @include sub-heading;
@@ -530,50 +523,28 @@ nav{
         p{
             @include description-text;
             color: $seconday-white-color;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
 
             a{
                 @include primary-btn;
             }
             
+        }  
+    }
+    .contact-info{
+        @extend .contact-form;
+
+        small{
+            @include description-text;
+            color: $primary-color;
+            font-weight: 500 !important;
         }
 
-        input{
-            width: 95%;
-            height: 50px;
-            margin-bottom:15px;
-            background: $input-bg;
-            border: none;
-            border-bottom: 2px solid $input-bg;
-            padding-left: 10px;
+        p{
+            @include description-text;
             color: $seconday-white-color;
-
-            
-            &:focus{
-                outline: none;
-            }
-            &:hover{
-                border-bottom: 2px solid $seconday-color;
-            }
         }
-        textarea{
-            @extend input;
-            height: 180px ;
-            color: $seconday-white-color;
-            margin-bottom: 30px;
-
-
-        }
-        .form-submit{
-            width: 95%;
-            text-align: right !important;
-            
-            input{
-                width: 100%;
-                @include primary-btn;
-            }
-        }
-        
+       
     }
 }
 // socail media accounts

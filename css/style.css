@@ -793,32 +793,18 @@ nav ul li a:hover {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background: #2b2b2b;
+  padding: 50px 0;
 }
 
-.footer .contact-form {
-  width: 60%;
-  padding: 20px;
+.footer .contact-form, .footer .contact-info {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-@media screen and (max-width: 900px) {
-  .footer .contact-form {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .footer .contact-form {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .footer .contact-form {
-    width: 100%;
-  }
-}
-
-.footer .contact-form h2 {
+.footer .contact-form h2, .footer .contact-info h2 {
   font-size: 2.4rem;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
@@ -827,25 +813,25 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .footer .contact-form h2 {
+  .footer .contact-form h2, .footer .contact-info h2 {
     font-size: 2em;
   }
 }
 
-.footer .contact-form h2 span {
+.footer .contact-form h2 span, .footer .contact-info h2 span {
   color: #08fdd8;
 }
 
-.footer .contact-form p {
+.footer .contact-form p, .footer .contact-info p {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.2;
   font-family: "Montserrat", sans-serif;
   color: #ddd;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
-.footer .contact-form p a {
+.footer .contact-form p a, .footer .contact-info p a {
   text-decoration: none;
   color: #08fdd8;
   font-size: 18px;
@@ -857,57 +843,26 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-.footer .contact-form p a:hover {
+.footer .contact-form p a:hover, .footer .contact-info p a:hover {
   background-color: #08fdd8;
   color: #1d1d1d;
 }
 
-.footer .contact-form input, .footer .contact-form textarea {
-  width: 95%;
-  height: 50px;
-  margin-bottom: 15px;
-  background: #2b2b2b;
-  border: none;
-  border-bottom: 2px solid #2b2b2b;
-  padding-left: 10px;
-  color: #ddd;
-}
-
-.footer .contact-form input:focus, .footer .contact-form textarea:focus {
-  outline: none;
-}
-
-.footer .contact-form input:hover, .footer .contact-form textarea:hover {
-  border-bottom: 2px solid #08fdd8;
-}
-
-.footer .contact-form textarea {
-  height: 180px;
-  color: #ddd;
-  margin-bottom: 30px;
-}
-
-.footer .contact-form .form-submit {
-  width: 95%;
-  text-align: right !important;
-}
-
-.footer .contact-form .form-submit input, .footer .contact-form .form-submit textarea {
-  width: 100%;
-  text-decoration: none;
-  color: #08fdd8;
-  font-size: 18px;
+.footer .contact-info small {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.2;
   font-family: "Montserrat", sans-serif;
-  border: 2px solid #08fdd8;
-  padding: 10px 25px;
-  -webkit-transition: .3s;
-  transition: .3s;
-  border-radius: 5px;
+  color: #7510F7;
+  font-weight: 500 !important;
 }
 
-.footer .contact-form .form-submit input:hover, .footer .contact-form .form-submit textarea:hover {
-  background-color: #08fdd8;
-  color: #1d1d1d;
+.footer .contact-info p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+  color: #ddd;
 }
 
 .social-link {
